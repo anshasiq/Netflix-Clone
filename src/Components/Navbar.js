@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import FavMov from './FavList';
 function Nbar(){
     return(<>
 <Navbar expand="lg" className="bg-body-tertiary">
@@ -11,6 +12,7 @@ function Nbar(){
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/ml">MovieList</Nav.Link>
+            <Nav.Link href="/favmov">Favourite Movies</Nav.Link>
             </Nav>
             </Navbar.Collapse>
       </Container>

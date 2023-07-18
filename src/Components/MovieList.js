@@ -5,7 +5,7 @@ import ModalM from './ModalMovie';
 import Movie from './Movie';
 // import { Card, Button } from "react-bootstrap";
 function MovieList(props){
-console.log(props.data);
+// console.log(props.data);
     return(
     <>
 <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-around'}}>
