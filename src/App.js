@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import React from "react";
 import MovieList from './Components/MovieList';
 import { Routes, Route } from 'react-router-dom';
+import FavMov from './Components/FavList';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
      <Routes>
  <Route path='/' element={<Home />} />
  <Route path='/ml' element={<MovieList />} />
+ <Route path='/favmov' element={<FavMov />} />
  </Routes>
     </>
   );

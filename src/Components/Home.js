@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import MovieList from './MovieList';
-
+import FavMov from './FavList';
 import Nbar from './Navbar';
 // import ModalM from './ModalMovie';
 function Home() {
@@ -24,7 +24,7 @@ function Home() {
   
     },[]);
 
-   console.log(data);
+//    console.log(data);
     return (<>
 
 <Nbar />
