@@ -11,7 +11,7 @@ function Nbar(){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/ml">MovieList</Nav.Link>
+            {/* <Nav.Link href="/ml">MovieList</Nav.Link> */}
             <Nav.Link href="/favmov">Favourite Movies</Nav.Link>
             </Nav>
             </Navbar.Collapse>

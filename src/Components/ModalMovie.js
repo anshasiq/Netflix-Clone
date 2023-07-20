@@ -5,13 +5,14 @@ import Modal from 'react-bootstrap/Modal';
 //https://movies-api-vdsp.onrender.com/getMovies
 function ModalM({data,handleClose,handleShow,show}) {
 async function handleAddFav(){
-  console.log("asd");
+  console.log(data.title);
+  console.log(data.overview);
   let url = `https://movies-api-vdsp.onrender.com/addMovie`;
   let dataa = {
-    ti: data.title,
-    ty: data.poster_path,
-    comm: data.overview,
-    ye: 2323,
+    "title": `${data.title}`,
+    "typee": `${data.overview}`,
+    "year": data.release_date,
+    "comm": `https://image.tmdb.org/t/p/original/${data.poster_path}`,
     // overview: data.overview,
   }
   let response = await fetch(url, {
@@ -23,7 +24,7 @@ async function handleAddFav(){
   })
   let recivedData = await response.json();
   console.log('recivedData', recivedData);
-  if(response.status === 201){
+  if(response.status === 200){
     alert('added successfuly')
   }
 }
@@ -44,7 +45,7 @@ async function handleAddFav(){
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleAddFav}>+ Add to F</Button>
+          <Button variant="primary" onClick={handleAddFav}>+ Add to Favourite</Button>
           {/* <Button variant="primary" onClick={handleClose}>
             Save Changes
           </Button> */}
