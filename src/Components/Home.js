@@ -6,7 +6,7 @@ import Nbar from './Navbar';
 function Home() {
     const [data, setData] = useState([]);
     async function getAllReceipes(){
-        const response = await fetch(process.env.REACT_APP_KEY);
+        const response = await fetch(`${process.env.REACT_APP_KEY}/trending`);
         const mov = await response.json();
 
         // const dataWithComment = mov.map(item => ({
